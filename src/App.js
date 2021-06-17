@@ -6,7 +6,6 @@ function App() {
     return (
         <div className="app">
             <HomeScreen />
-            <h1>Lets build netflix</h1>
         </div>
     );
 }

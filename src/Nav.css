@@ -9,6 +9,7 @@
     /* Animations */
     transition-timing-function: ease-in;
     transition: all 0.5s;
+    background: linear-gradient(#111, rgba(255, 255, 255, 0));
 }
 .nav_contents {
     display: flex;
@@ -25,6 +26,28 @@
     object-fit: contain;
     padding-left: 20px;
     cursor: pointer;
+}
+.nav_links {
+    position: fixed;
+    left: 120px;
+    top: -15px;
+}
+.nav_link,
+.nav_link > a {
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    margin: 20px;
+    transition: all 150ms ease-in;
+}
+.nav_link:hover,
+.nav_link > a:hover {
+    transform: scale(1.04);
+    color: rgb(190, 190, 190);
+    opacity: 1;
+}
+.nav_link > a {
+    text-decoration: none;
 }
 
 .nav_avatar {

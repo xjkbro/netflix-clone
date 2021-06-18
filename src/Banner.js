@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import "./Banner.css";
 import axios from "./axios";
 import requests from "./Requests";
+import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import InfoIcon from "@material-ui/icons/Info";
 
 function Banner() {
     const [movie, setMovie] = useState([]);
@@ -16,7 +18,6 @@ function Banner() {
         }
         fetchData();
     }, []);
-    console.log(movie);
     function truncate(string, n) {
         return string?.length > n ? string.substr(0, n - 1) + "..." : string;
     }
@@ -34,11 +35,17 @@ function Banner() {
                     {movie?.title || movie?.name || movie?.original_name}
                 </h1>
                 <div className="banner_buttons">
-                    <button className="banner_button">Play</button>
-                    <button className="banner_button">My List</button>
+                    <button className="banner_button">
+                        <PlayArrowIcon />
+                        <span className="button_word">Play</span>
+                    </button>
+                    <button className="banner_button">
+                        <InfoIcon />
+                        <span className="button_word">My List</span>
+                    </button>
                 </div>
                 <h1 className="banner_description">
-                    {truncate(movie?.overview, 220)}{" "}
+                    {truncate(movie?.overview, 220)}
                 </h1>
             </div>
             <div className="banner-fadeBottom" />

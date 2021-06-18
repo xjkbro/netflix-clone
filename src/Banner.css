@@ -58,3 +58,19 @@
     background-color: #e6e6e6;
     transition: all 0.2s;
 }
+
+@media screen and (max-width: 600px) {
+    .banner {
+        margin-bottom: 20px;
+    }
+    .banner_button {
+        margin: 5px;
+    }
+    .banner_description {
+        font-size: 0.6rem;
+        font-weight: 300;
+        max-width: 280px;
+        letter-spacing: 1px;
+        height: 80px;
+    }
+}

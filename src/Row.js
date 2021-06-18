@@ -40,7 +40,11 @@ function Row({ title, fetchURL, isLargeRow }) {
                                     alt={movie.name}
                                 />
                                 <div className="row_title">
-                                    <p className="title_name">
+                                    <p
+                                        className={`title_name ${
+                                            isLargeRow && "title_nameLarge"
+                                        }`}
+                                    >
                                         {truncate(
                                             movie?.title ||
                                                 movie?.name ||

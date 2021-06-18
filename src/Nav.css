@@ -57,6 +57,9 @@
 }
 
 @media screen and (max-width: 600px) {
+    .nav {
+        background: #111;
+    }
     .nav_link {
         display: none;
     }
